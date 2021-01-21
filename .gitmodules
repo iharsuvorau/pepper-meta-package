@@ -1,0 +1,9 @@
+[submodule "garlic-client"]
+	path = garlic-client
+	url = https://github.com/iharsuvorau/garlic-client.git
+[submodule "garlic"]
+	path = garlic
+	url = https://github.com/iharsuvorau/garlic.git
+[submodule "tomato"]
+	path = tomato
+	url = https://github.com/iharsuvorau/tomato.git
