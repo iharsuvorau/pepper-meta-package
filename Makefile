@@ -1,6 +1,6 @@
 PACKAGE_NAME := pepper-$(VERSION)
 RELEASE_DIR := build/release/$(PACKAGE_NAME)
-ARCHIVE_PATH := $(RELEASE_DIR).tar.gz
+ARCHIVE_PATH := $(RELEASE_DIR).zip
 
 .PHONY: update release
 
@@ -22,7 +22,7 @@ release: update
 	cp -r garlic-client/public $(RELEASE_DIR)/site
 
 	# archiving
-	tar -czf $(ARCHIVE_PATH) -C build/release $(PACKAGE_NAME)
+	cd $(RELEASE_DIR); cd ..; zip -re $(PACKAGE_NAME).zip $(PACKAGE_NAME); cd ../..
 
 	# publishing
 	rsync $(ARCHIVE_PATH) ims.ut.ee:/home/ihar/public_html/pepper_releases/
