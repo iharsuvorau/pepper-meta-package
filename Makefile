@@ -26,4 +26,4 @@ release: update
 
 	# publishing
 	rsync $(ARCHIVE_PATH) ims.ut.ee:/home/ihar/public_html/pepper_releases/
-	echo "The latest release is availabe at https://ims.ut.ee/~ihar/pepper_releases/$(PACKAGE_NAME).tar.gz"
+	echo "The latest release is availabe at https://ims.ut.ee/~ihar/pepper_releases/$(PACKAGE_NAME).zip"
