@@ -2,3 +2,5 @@ data
 build
 .idea
 .DS_Store
+password
+*.swp
