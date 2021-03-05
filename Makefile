@@ -14,7 +14,7 @@ release: update
 	# making server
 	mkdir -p $(RELEASE_DIR)/server;
 	cd garlic && go get . && cd ..;
-	GOOS=windows GOARCH=amd64 go build -o $(RELEASE_DIR)/server/ ./garlic;
+	cd ./garlic && GOOS=windows GOARCH=amd64 go build -o ../$(RELEASE_DIR)/server/ . && cd ..;
 	cp -r data $(RELEASE_DIR)/server;
 
 	# making site
