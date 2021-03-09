@@ -19,7 +19,8 @@ release: update
 
 	# making site
 	cd garlic-client && npm install && npm run build;
-	cp -r garlic-client/public $(RELEASE_DIR)/site
+	cp -r garlic-client/public $(RELEASE_DIR)/site;
+	cp caddy_windows_amd64_custom.exe $(RELEASE_DIR)/site
 
 	# archiving
 	cd $(RELEASE_DIR); cd ..; zip -re $(PACKAGE_NAME).zip $(PACKAGE_NAME); cd ../..
